@@ -10,7 +10,6 @@ $wgExtensionCredits['specialpage'][] = array(
 );
 
 $wgMessagesDirs['TimeMachine'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['TimeMachine'] = __DIR__ . '/TimeMachine.i18n.php';
 $wgExtensionMessagesFiles['TimeMachineAlias'] = __DIR__ . '/TimeMachine.alias.php';
 
 $wgSpecialPages['TimeMachine'] = 'SpecialTimeMachine';

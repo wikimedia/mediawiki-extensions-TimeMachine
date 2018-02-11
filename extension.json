@@ -1,0 +1,26 @@
+{
+	"name": "TimeMachine",
+	"version": "0.3",
+	"author": "[https://www.mediawiki.org/wiki/User:Sophivorus Felipe Schenone]",
+	"url": "https://www.mediawiki.org/wiki/Extension:TimeMachine",
+	"descriptionmsg": "timemachine-desc",
+	"type": "specialpage",
+	"SpecialPages": {
+		"TimeMachine": "SpecialTimeMachine"
+	},
+	"MessagesDirs": {
+		"TimeMachine": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"TimeMachineAlias": "TimeMachine.alias.php"
+	},
+	"AutoloadClasses": {
+		"SpecialTimeMachine": "SpecialTimeMachine.php"
+	},
+	"Hooks": {
+		"BeforeInitialize": "SpecialTimeMachine::onBeforeInitialize"
+	},
+	"manifest_version": 2
+}

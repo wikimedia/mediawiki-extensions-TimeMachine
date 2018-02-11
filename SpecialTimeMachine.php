@@ -15,17 +15,18 @@ class SpecialTimeMachine extends SpecialPage {
 			$response->setCookie( 'timemachine-date', $date );
 		}
 		$output = $this->getOutput();
+		$output->enableOOUI();
 		$output->addHTML('
 			<p>' . wfMessage( 'timemachine-p1' )->escaped() . '</p>
 			<form method="post">
 			<input type="date" name="date" value="' . $date . '" />
-			<button type="submit">' . wfMessage( 'timemachine-button1' )->escaped() . '</button>
+			<button type="submit" class="mw-ui-button mw-ui-progressive">' . wfMessage( 'timemachine-button1' )->escaped() . '</button>
 			</form>
 			<p>' . wfMessage( 'timemachine-p2' )->escaped() . '</p>
 			<p>' . wfMessage( 'timemachine-p3' )->escaped() . '</p>
 			<form method="post">
 			<input type="hidden" name="date" value="" />
-			<button type="submit">' . wfMessage( 'timemachine-button2' )->escaped() . '</button>
+			<button type="submit" class="mw-ui-button">' . wfMessage( 'timemachine-button2' )->escaped() . '</button>
 			</form>
 		');
 		$this->setHeaders();

@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"timemachine": "타임 머신",
+	"timemachine-button1": "이 날짜로 이동",
+	"timemachine-button2": "현재로 돌아가기"
+}

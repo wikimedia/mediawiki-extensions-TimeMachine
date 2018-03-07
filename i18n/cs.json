@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ilimanaq29"
+			"Ilimanaq29",
+			"Matěj Suchánek"
 		]
 	},
 	"timemachine": "Stroj času",
@@ -9,6 +10,6 @@
 	"timemachine-p1": "Vložte datum dole, abyste prohledali wiki v tomto datu.",
 	"timemachine-button1": "Jít na toto datum",
 	"timemachine-p2": "Uvědomte si, že se změní pouze obsah wiki. Styl, boční panel, zápatí a jiné prvky wiki se nezmění.",
-	"timemachine-p3": "Abyste opět mohl/a prohledávat wiki obvyklým způsobem, klikněte na tlačítko dole nebo smažte svoje soubory cookies.",
+	"timemachine-p3": "Abyste opět mohl/a prohledávat wiki obvyklým způsobem, klikněte na tlačítko dole nebo smažte svoje cookies.",
 	"timemachine-button2": "Zpět do současnosti"
 }

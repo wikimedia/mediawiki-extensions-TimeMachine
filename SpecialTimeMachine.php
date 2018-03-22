@@ -44,7 +44,7 @@ class SpecialTimeMachine extends SpecialPage {
 		$date = $request->getCookie( 'timemachine-date' );
 		$rev_id = $request->getVal( 'oldid' );
 		if ( $date and ! $rev_id ) {
-			$dbr = wfGetDB( DB_SLAVE );
+			$dbr = wfGetDB( DB_REPLICA );
 
 			$rev_timestamp = wfTimestamp( TS_UNIX, $date . ' 00:00:00' );
 			$rev_timestamp = $dbr->timestamp( $rev_timestamp );

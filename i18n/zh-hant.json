@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Laundry Machine"
+			"Laundry Machine",
+			"Hello903hello"
 		]
 	},
-	"timemachine": "時間機器"
+	"timemachine": "時間機器",
+	"timemachine-desc": "在[[Special:TimeMachine]]設定日期後，可允許瀏覽該日期的wiki内容。",
+	"timemachine-button1": "前往該日期"
 }

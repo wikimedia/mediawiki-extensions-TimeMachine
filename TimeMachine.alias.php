@@ -6,18 +6,18 @@
  * @ingroup Extensions
  */
 
-$specialPageAliases = array();
+$specialPageAliases = [];
 
 /** English
  * @author Sophivorus
  */
-$specialPageAliases['en'] = array(
-	'TimeMachine' => array( 'TimeMachine', 'Time Machine' ),
-);
+$specialPageAliases['en'] = [
+	'TimeMachine' => [ 'TimeMachine', 'Time Machine' ],
+];
 
 /** Spanish (español)
  * @author Sophivorus
  */
-$specialPageAliases['es'] = array(
-	'TimeMachine' => array( 'MáquinaDelTiempo', 'Máquina del tiempo' ),
-);
+$specialPageAliases['es'] = [
+	'TimeMachine' => [ 'MáquinaDelTiempo', 'Máquina del tiempo' ],
+];

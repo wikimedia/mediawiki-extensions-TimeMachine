@@ -6,6 +6,9 @@ class SpecialTimeMachine extends SpecialPage {
 		parent::__construct( 'TimeMachine' );
 	}
 
+	/**
+	 * @param Parser $parser
+	 */
 	public function execute( $parser ) {
 		$request = $this->getRequest();
 		$date = $request->getCookie( 'timemachine-date', null, date( 'Y-m-d' ) );
@@ -36,6 +39,14 @@ class SpecialTimeMachine extends SpecialPage {
 	 * This method redirects to the first revision before the time set by the user in Special:TimeMachine
 	 * It would be better if instead of redirecting it changed the request on the fly, but I haven't found
 	 * a way yet.
+	 *
+	 * @param Title &$title
+	 * @param \Article &$article
+	 * @param OutputPage &$output
+	 * @param User &$user
+	 * @param \WebRequest $request
+	 * @param \MediaWiki $mediaWiki
+	 * @return bool
 	 */
 	public static function onBeforeInitialize( &$title, &$article, &$output, &$user, $request, $mediaWiki ) {
 		if ( $request->getVal( 'action', 'view' ) != 'view' ) {
@@ -43,7 +54,7 @@ class SpecialTimeMachine extends SpecialPage {
 		}
 		$date = $request->getCookie( 'timemachine-date' );
 		$rev_id = $request->getVal( 'oldid' );
-		if ( $date and ! $rev_id ) {
+		if ( $date && !$rev_id ) {
 			$dbr = wfGetDB( DB_REPLICA );
 
 			$rev_timestamp = wfTimestamp( TS_UNIX, $date . ' 00:00:00' );
@@ -51,15 +62,16 @@ class SpecialTimeMachine extends SpecialPage {
 
 			$rev_page = $title->getArticleID();
 
-			$result = $dbr->select( 'revision', array('rev_id'), "rev_page = $rev_page AND rev_timestamp < $rev_timestamp", __METHOD__, array( 'ORDER BY' => 'rev_timestamp DESC', 'LIMIT' => 1 ) );
+			$result = $dbr->select( 'revision', [ 'rev_id' ], "rev_page = $rev_page AND rev_timestamp < $rev_timestamp", __METHOD__, [ 'ORDER BY' => 'rev_timestamp DESC', 'LIMIT' => 1 ] );
+			// phpcs:ignore MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures
 			if ( $row = $result->fetchRow() ) {
-				//Redirect to the old revision of the page
+				// Redirect to the old revision of the page
 				$rev_id = $row['rev_id'];
 				$rev = Revision::newFromId( $rev_id );
-				$url = $rev->getTitle()->getLocalURL( array( 'oldid' => $rev_id ) );
+				$url = $rev->getTitle()->getLocalURL( [ 'oldid' => $rev_id ] );
 				$output->redirect( $url );
 			} else {
-				//The page doesn't exist yet
+				// The page doesn't exist yet
 			}
 		}
 	}

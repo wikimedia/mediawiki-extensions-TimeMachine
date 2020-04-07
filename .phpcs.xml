@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <ruleset>
-	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
-		<exclude name="Generic.Files.LineLength.TooLong" />
-		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis" />
+	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki" />
+	<rule ref="Generic.Files.LineLength">
+		<properties>
+			<property name="lineLimit" value="126" />
+		</properties>
 	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php,php5,inc"/>

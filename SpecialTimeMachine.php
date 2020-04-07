@@ -19,7 +19,7 @@ class SpecialTimeMachine extends SpecialPage {
 		}
 		$output = $this->getOutput();
 		$output->enableOOUI();
-		$output->addHTML('
+		$output->addHTML( '
 			<p>' . wfMessage( 'timemachine-p1' )->escaped() . '</p>
 			<form method="post">
 			<input type="date" name="date" value="' . $date . '" />
@@ -31,7 +31,7 @@ class SpecialTimeMachine extends SpecialPage {
 			<input type="hidden" name="date" value="" />
 			<button type="submit" class="mw-ui-button">' . wfMessage( 'timemachine-button2' )->escaped() . '</button>
 			</form>
-		');
+		' );
 		$this->setHeaders();
 	}
 
@@ -46,33 +46,38 @@ class SpecialTimeMachine extends SpecialPage {
 	 * @param User &$user
 	 * @param \WebRequest $request
 	 * @param \MediaWiki $mediaWiki
-	 * @return bool
 	 */
 	public static function onBeforeInitialize( &$title, &$article, &$output, &$user, $request, $mediaWiki ) {
 		if ( $request->getVal( 'action', 'view' ) != 'view' ) {
-			return true;
+			return;
 		}
+
 		$date = $request->getCookie( 'timemachine-date' );
-		$rev_id = $request->getVal( 'oldid' );
-		if ( $date && !$rev_id ) {
-			$dbr = wfGetDB( DB_REPLICA );
-
-			$rev_timestamp = wfTimestamp( TS_UNIX, $date . ' 00:00:00' );
-			$rev_timestamp = $dbr->timestamp( $rev_timestamp );
-
-			$rev_page = $title->getArticleID();
-
-			$result = $dbr->select( 'revision', [ 'rev_id' ], "rev_page = $rev_page AND rev_timestamp < $rev_timestamp", __METHOD__, [ 'ORDER BY' => 'rev_timestamp DESC', 'LIMIT' => 1 ] );
-			// phpcs:ignore MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures
-			if ( $row = $result->fetchRow() ) {
-				// Redirect to the old revision of the page
-				$rev_id = $row['rev_id'];
-				$rev = Revision::newFromId( $rev_id );
-				$url = $rev->getTitle()->getLocalURL( [ 'oldid' => $rev_id ] );
-				$output->redirect( $url );
-			} else {
-				// The page doesn't exist yet
-			}
+		if ( !$date || $request->getBool( 'oldid' ) ) {
+			return;
 		}
+
+		$dbr = wfGetDB( DB_REPLICA );
+
+		$rev_timestamp = wfTimestamp( TS_UNIX, $date . ' 00:00:00' );
+		$rev_page = $title->getArticleID();
+
+		$rev_id = $dbr->selectField(
+			'revision',
+			'rev_id',
+			[ 'rev_page' => $rev_page, 'rev_timestamp < ' . $dbr->timestamp( $rev_timestamp ) ],
+			__METHOD__,
+			[ 'ORDER BY' => 'rev_timestamp DESC', 'LIMIT' => 1 ]
+		);
+
+		// The page doesn't exist yet
+		if ( !$rev_id ) {
+			return;
+		}
+
+		// Redirect to the old revision of the page
+		$rev = Revision::newFromId( $rev_id );
+		$url = $rev->getTitle()->getLocalURL( [ 'oldid' => $rev_id ] );
+		$output->redirect( $url );
 	}
 }

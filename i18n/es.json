@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ciencia Al Poder",
 			"Fitoschido",
 			"Jakeukalane",
 			"Sophivorus"
 		]
 	},
 	"timemachine": "Máquina del tiempo",
-	"timemachine-desc": "Luego de seleccionar una fecha en [[Especial:MáquinaDelTiempo]], permite navegar el contenido de la wiki como era en esa fecha.",
+	"timemachine-desc": "Luego de seleccionar una fecha en [[Special:TimeMachine]], permite navegar el contenido de la wiki como era en esa fecha.",
 	"timemachine-p1": "Indica una fecha más abajo para ver la wiki tal como era entonces.",
 	"timemachine-button1": "Ir a esta fecha",
 	"timemachine-p2": "Observa que solo el contenido de la wiki cambiará. El estilo, la barra lateral, el pie de página y otros elementos de la wiki permanecerán iguales.",

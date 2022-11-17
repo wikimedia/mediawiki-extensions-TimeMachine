@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"timemachine": "Machina de tempore",
+	"timemachine-desc": "Post haber fixate un data in [[Special:TimeMachine]], permitte navigar le contento del wiki de iste data.",
+	"timemachine-p1": "Insere un data hic infra pro navigar le wiki como esseva a iste data.",
+	"timemachine-button1": "Ir a iste data",
+	"timemachine-p2": "Nota que solmente le contento del wiki cambiara. Le stilo, barra lateral, pede e altere elementos del wiki restara inalterate.",
+	"timemachine-p3": "Pro retornar al navigation normal del wiki, clicca sur le button hic infra, o vacua tu cookies.",
+	"timemachine-button2": "Retornar al presente"
+}

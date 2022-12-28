@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"timemachine": "Vremenska mašina",
+	"timemachine-desc": "Posle postavljanja datuma u [[Special:TimeMachine]], dozvoljava pregled sadržaja vikija koji je bio na taj dan.",
+	"timemachine-p1": "Unesite datum ispod da pregledate viki na taj dan.",
+	"timemachine-button1": "Idi na ovaj datum",
+	"timemachine-p2": "Imajte na umu da će se samo sadržaj vikija menjati. Stil, bočna traka, podnožje i ostali elementi vikija ostaće nepromenjeni.",
+	"timemachine-p3": "Da se vratite na normalno pregledanje vikija, kliknite dugme ispod ili izbrišite Vaše kolačiće pretrage.",
+	"timemachine-button2": "Vrati se na sadašnjost"
+}

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"timemachine": "Časovni stroj",
+	"timemachine-desc": "Po določitvi datuma vam [[Special:TimeMachine]] omogoča brskanje po vsebini vikija, kakršna je bila na ta datum.",
+	"timemachine-p1": "Spodaj vnesite datum za brskanje v vikiju, kakršen je bil na ta dan.",
+	"timemachine-button1": "Pojdi na ta datum",
+	"timemachine-p2": "Upoštevajte, da se bo spremenila samo vsebina vikija. Slog, stranska letvica, noga in drugi elementi vikija bodo ostali nespremenjeni.",
+	"timemachine-p3": "Za vrnitev v običajno brskanje po vikiju kliknite spodnji gumb ali izpraznite piškotke.",
+	"timemachine-button2": "Nazaj v sedanjost"
+}

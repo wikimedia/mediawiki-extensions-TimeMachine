@@ -1,10 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"McDutchie"
 		]
 	},
 	"timemachine": "Tijdmachine",
+	"timemachine-desc": "Na het instellen van een datum in [[Special:TimeMachine]] kunt u door de inhoud van de wiki bladeren zoals deze op die datum was.",
+	"timemachine-p1": "Voer hieronder een datum in om door de wiki te bladeren zoals deze op die datum was.",
 	"timemachine-button1": "Ga naar deze datum",
+	"timemachine-p2": "Merk op dat alleen de inhoud van de wiki verandert. De stijl, zijbalk, voettekst en andere elementen van de wiki blijven ongewijzigd.",
+	"timemachine-p3": "Om weer normaal door de wiki te bladeren, klikt u op de onderstaande knop of wist u uw cookies.",
 	"timemachine-button2": "Terug naar het heden"
 }

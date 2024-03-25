@@ -2,6 +2,8 @@
 
 namespace MediaWiki\Extension\TimeMachine;
 
+use MediaWiki\MediaWikiServices;
+
 class Hooks {
 	/**
 	 * This method redirects to the first revision before the time set by the user in Special:TimeMachine
@@ -25,7 +27,7 @@ class Hooks {
 			return;
 		}
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$rev_timestamp = wfTimestamp( TS_UNIX, $date . ' 00:00:00' );
 		$rev_page = $title->getArticleID();

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ant176"
+		]
+	},
+	"timemachine": "タイムマシン",
+	"timemachine-desc": "[[Special:TimeMachine]]で日付を設定すると、当時のウィキの内容を閲覧できるようになる。",
+	"timemachine-p1": "以下に日付を入力すると、その当時のウィキを閲覧できます。",
+	"timemachine-button1": "この日付に移動",
+	"timemachine-p2": "ウィキの内容のみが変更されることに注意してください。スタイル、サイドバー、フッターなどのウィキの要素は変更されません。",
+	"timemachine-p3": "通常のウィキの閲覧に戻るには、下のボタンをクリックするか、Cookieを削除してください。",
+	"timemachine-button2": "現在に戻る"
+}

@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"timemachine": "Zäitmaschinn",
 	"timemachine-button1": "Op dësen Datum goen",
-	"timemachine-button2": "Zréck an d'Géigewaart"
+	"timemachine-button2": "Zeréck an d'Géigewaart"
 }

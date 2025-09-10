@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Urhixidur"
 		]
 	},
 	"timemachine": "Machine temporelle",
@@ -9,6 +10,6 @@
 	"timemachine-p1": "Saisir une date ci-dessous pour naviguer dans le wiki tel qu’il était à cette date.",
 	"timemachine-button1": "Aller à cette date",
 	"timemachine-p2": "Noter que seul le contenu du wiki change. Le style, la barre latérale, le pied de page et d’autres éléments du wiki restent inchangés.",
-	"timemachine-p3": "Pour revenir à la navigation normale du wiki, cliquez sur le bouton ci-dessous, ou videz vos cookies.",
+	"timemachine-p3": "Pour revenir à la navigation normale du wiki, cliquez sur le bouton ci-dessous, ou supprimez vos témoins (''cookies'').",
 	"timemachine-button2": "Retour au présent"
 }

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"timemachine": "Máquina do tempo",
+	"timemachine-desc": "Despois de definir unha data en [[Special:TimeMachine]], permite explorar o contido do wiki tal e como estaba nesa data.",
+	"timemachine-p1": "Introduce unha data abaixo para navegar polo wiki tal e como estaba nesa data.",
+	"timemachine-button1": "Ir a esta data",
+	"timemachine-p2": "Ten en conta que só cambiará o contido da wiki. O estilo, a barra lateral, o pé de páxina e outros elementos do wiki permanecerán sen cambios.",
+	"timemachine-p3": "Para volver á navegación normal do wiki, fai clic no botón de embaixo ou baleira as cookies.",
+	"timemachine-button2": "Volver ao presente"
+}

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"timemachine": "Stroj času",
+	"timemachine-desc": "Po nastavení dátumu na stránke [[Special:TimeMachine]] umožňuje prehliadať obsah wiki v podobe, v akej bol k danému dátumu.",
+	"timemachine-p1": "Zadajte nižšie dátum, ak chcete prehliadať wiki v podobe, v akej bola k danému dátumu.",
+	"timemachine-button1": "Prejsť na tento dátum",
+	"timemachine-p2": "Upozorňujeme, že sa zmení len obsah wiki. Štýl, bočný panel, päta a ďalšie prvky wiki zostanú nezmenené.",
+	"timemachine-p3": "Ak sa chcete vrátiť k bežnému prehliadaniu wiki, kliknite na tlačidlo nižšie alebo vymažte svoje cookies.",
+	"timemachine-button2": "Späť do súčasnosti"
+}
